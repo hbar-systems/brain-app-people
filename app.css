@@ -1,0 +1,20 @@
+/* People: app styles. Created 2026-10-22. Tokens only. */
+.pp-name { font-family: var(--font-display); font-weight: 400; font-size: 28px; margin: 0 0 4px; overflow-wrap: anywhere; }
+.pp-lookup { display: flex; gap: 10px; align-items: stretch; }
+.pp-lookup .bf-input { flex: 1; min-width: 0; }
+.pp-from { margin: 0 0 14px; font-size: 13px; color: var(--muted); }
+.pp-block { margin-top: 24px; }
+.pp-list { list-style: none; margin: 0; padding: 0; }
+.pp-list li { padding: 10px 0; border-top: 1px solid var(--border); }
+.pp-list li:first-child { border-top: 0; }
+.pp-list p { margin: 0; }
+.pp-list .bf-mono { color: var(--muted); display: block; margin-top: 2px; overflow-wrap: anywhere; }
+.pp-ex { padding: 10px 0; border-top: 1px solid var(--border); }
+.pp-ex p { margin: 0 0 4px; overflow-wrap: anywhere; font-size: 14px; color: var(--text-dim); }
+.pp-answer { margin-top: 14px; }
+.pp-toggle { cursor: pointer; }
+@media (max-width: 560px) {
+  .pp-name { font-size: 24px; }
+  .pp-lookup { flex-wrap: wrap; }
+  .pp-lookup .bf-btn { width: 100%; justify-content: center; }
+}

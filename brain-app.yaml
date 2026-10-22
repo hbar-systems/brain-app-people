@@ -1,0 +1,38 @@
+# People: brain-app manifest. Created 2026-10-22.
+dialect: brain-app/v1
+id: people
+name: People
+version: 0.1.0
+description: "Type a name and see who they are, what you last discussed and what is still open between you, from your brain's memory. Add a note to remember more."
+license: AGPL-3.0
+
+author:
+  name: hbar
+  url: https://hbar.systems
+  contact: hello@hbar.systems
+
+repo: https://github.com/hbar-systems/brain-app-people
+
+tab:
+  label: People
+  route: /people
+  order: 50
+
+entries:
+  ui_bundle: ./
+
+permissions:
+  - memory.read
+  - memory.write
+  - llm.invoke
+
+requires_layers:
+  - layer: semantic
+    mode: read
+  - layer: episodic
+    mode: read
+  - layer: semantic
+    mode: append
+
+engines:
+  brainfoundry-nous: ">=0.13.0"
